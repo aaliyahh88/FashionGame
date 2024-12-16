@@ -9,40 +9,36 @@
 <body>
     <header>
         <h1>Fashion Game</h1>
+        <button id="play-btn">Play</button>
     </header>
 
     <main>
-        <!-- Mannequin Selection Section -->
-        <section id="mannequin-selection">
+        <!-- Mannequin Selection -->
+        <section id="mannequin-selection" class="hidden">
             <h2>Select Your Mannequin</h2>
             <button id="male-btn">Male</button>
             <button id="female-btn">Female</button>
         </section>
 
-        <!-- Closet Section -->
-        <section id="closet" style="display:none;">
-            <h2>Choose Your Outfit</h2>
-            <div class="clothing-item" id="shirts">Shirts</div>
-            <div class="clothing-item" id="pants">Pants</div>
-            <div class="clothing-item" id="skirts">Skirts</div>
-            <div class="clothing-item" id="jackets">Jackets</div>
-            <div class="clothing-item" id="shoes">Shoes</div>
-            <div class="clothing-item" id="accessories">Accessories</div>
-            <div class="clothing-item" id="hair">Hair</div>
+        <!-- Closet -->
+        <section id="closet" class="hidden">
+            <h2>Dress Your Mannequin</h2>
+            <div id="mannequin-display">
+                <!-- Mannequin image will be displayed here -->
+            </div>
+            <div id="clothing-options">
+                <!-- Clothing items will be listed here -->
+            </div>
             <button id="finish-btn">Finish</button>
         </section>
 
-        <!-- Rating Screen Section -->
-        <section id="rating-screen" style="display:none;">
+        <!-- Rating Screen -->
+        <section id="rating-screen" class="hidden">
             <h2>Your Rating</h2>
-            <div id="rating-display">Your rating will appear here.</div>
-            <p id="rating-feedback">Great job! Try again to improve your score.</p>
+            <p id="rating-result"></p>
+            <button id="restart-btn">Restart</button>
         </section>
     </main>
-
-    <footer>
-        <button id="restart-btn">Restart Game</button>
-    </footer>
 
     <script src="script.js"></script>
 </body>
