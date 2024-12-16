@@ -1,42 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const playBtn = document.getElementById('play-btn');
+    const mannequinSelection = document.getElementById('mannequin-selection');
+    const closet = document.getElementById('closet');
+    const ratingScreen = document.getElementById('rating-screen');
     const maleBtn = document.getElementById('male-btn');
     const femaleBtn = document.getElementById('female-btn');
     const finishBtn = document.getElementById('finish-btn');
     const restartBtn = document.getElementById('restart-btn');
-    const mannequinSelection = document.getElementById('mannequin-selection');
-    const closet = document.getElementById('closet');
-    const ratingScreen = document.getElementById('rating-screen');
-    const ratingDisplay = document.getElementById('rating-display');
-    const ratingFeedback = document.getElementById('rating-feedback');
+    const mannequinDisplay = document.getElementById('mannequin-display');
+    const clothingOptions = document.getElementById('clothing-options');
+    const ratingResult = document.getElementById('rating-result');
+
+    let selectedMannequin = null;
+    let selectedItems = [];
+
+    playBtn.addEventListener('click', () => {
+        playBtn.parentElement.classList.add('hidden');
+        mannequinSelection.classList.remove('hidden');
+    });
 
     maleBtn.addEventListener('click', () => {
-        mannequinSelection.style.display = 'none';
-        closet.style.display = 'block';
-        // Additional code to display male mannequin
+        selectedMannequin = 'male';
+        startDressing();
     });
 
     femaleBtn.addEventListener('click', () => {
-        mannequinSelection.style.display = 'none';
-        closet.style.display = 'block';
-        // Additional code to display female mannequin
+        selectedMannequin = 'female';
+        startDressing();
     });
 
     finishBtn.addEventListener('click', () => {
-        closet.style.display = 'none';
-        ratingScreen.style.display = 'block';
         calculateRating();
+        closet.classList.add('hidden');
+        ratingScreen.classList.remove('hidden');
     });
 
     restartBtn.addEventListener('click', () => {
-        ratingScreen.style.display = 'none';
-        mannequinSelection.style.display = 'block';
-        // Reset selections and mannequin display
+        location.reload();
     });
 
-    function calculateRating() {
-        // Placeholder logic for rating calculation
-        const rating = Math.floor(Math.random() * 100) + 1;
-        ratingDisplay.textContent = `Your rating: ${rating}%`;
-        ratingFeedback.textContent = rating > 50 ? 'Great job! Try again to improve your score.' : 'Keep trying! You can do better.';
+    function startDressing() {
+        mannequinSelection.classList.add('hidden');
+        closet.classList.remove('hidden');
+        displayMannequin();
+        loadClothingItems();
     }
-});
+
+    function displayMannequin() {
+        mannequinDisplay.innerHTML = `<img src="images/${selectedMannequin}-mannequin.png" alt="${selectedMannequin} mannequin">`;
+    }
+
+    function loadClothingItems() {
+        const categories = ['skirts', 'hairstyles', 'shirts', 'jackets', 'shoes', 'purses'];
+        categories.forEach(category => {
+            for (let i = 1; i <= 3; i++) {
+                const item = document.createElement('div');
+                item.classList.add('clothing-item');
+                item.innerHTML = `<img src="images/${category}${i}.png" alt="${category} ${i}" data-category="${category}">`;
+                item.addEventListener('click', () => selectItem(item, category));
+                clothingOptions.appendChild(item);
+            }
+        });
+    }
+
+    function selectItem(item, category) {
+        // Deselect previous item in the same category
+        selectedItems = selectedItems.filter(i => i
+::contentReference[oaicite:0]{index=0}
+ 
