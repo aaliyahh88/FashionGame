@@ -1,67 +1,66 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f0e6f6; /* Light purple background */
+    color: #333;
+    text-align: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-header, footer {
-    background-color: #333;
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-}
-
-main {
-    flex: 1;
-    width: 100%;
-    max-width: 800px;
+header {
+    background-color: #d4a5d6; /* Pink header */
     padding: 20px;
-    box-sizing: border-box;
 }
 
-section {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+h1 {
+    color: #fff;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
+    background-color: #a64ca6; /* Purple buttons */
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
     cursor: pointer;
-    font-size: 16px;
-    margin: 5px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #7a3b7a;
+}
+
+.hidden {
+    display: none;
+}
+
+#mannequin-display {
+    margin: 20px auto;
+    width: 200px;
+    height: 400px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    position: relative;
+}
+
+#clothing-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .clothing-item {
-    padding: 10px;
-    background-color: #e8e8e8;
-    border-radius: 5px;
-    margin: 10px 0;
+    margin: 10px;
     cursor: pointer;
 }
 
-.clothing-item:hover {
-    background-color: #d0d0d0;
+.clothing-item img {
+    width: 100px;
+    height: auto;
+    border: 2px solid transparent;
+    border-radius: 5px;
 }
 
-#rating-display {
-    font-size: 24px;
-    color: #4caf50;
-    margin-top: 20px;
+.clothing-item img:hover {
+    border-color: #a64ca6;
 }
