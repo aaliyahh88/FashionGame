@@ -1,4 +1,3 @@
-<script src="script.js"></script>
 document.addEventListener('DOMContentLoaded', () => {
     const maleBtn = document.getElementById('male-btn');
     const femaleBtn = document.getElementById('female-btn');
@@ -7,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mannequinSelection = document.getElementById('mannequin-selection');
     const closet = document.getElementById('closet');
     const ratingScreen = document.getElementById('rating-screen');
+    const ratingDisplay = document.getElementById('rating-display');
+    const ratingFeedback = document.getElementById('rating-feedback');
 
     maleBtn.addEventListener('click', () => {
         mannequinSelection.style.display = 'none';
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     finishBtn.addEventListener('click', () => {
         closet.style.display = 'none';
         ratingScreen.style.display = 'block';
-        // Code to calculate and display rating
+        calculateRating();
     });
 
     restartBtn.addEventListener('click', () => {
@@ -32,5 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset selections and mannequin display
     });
 
-    // Additional event listeners for clothing selections
+    function calculateRating() {
+        // Placeholder logic for rating calculation
+        const rating = Math.floor(Math.random() * 100) + 1;
+        ratingDisplay.textContent = `Your rating: ${rating}%`;
+        ratingFeedback.textContent = rating > 50 ? 'Great job! Try again to improve your score.' : 'Keep trying! You can do better.';
+    }
 });
