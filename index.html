@@ -1,59 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Mannequin Selection Section -->
-    <section id="mannequin-selection">
-        <h1>Select Your Mannequin</h1>
-        <button id="male-btn" data-type="mannequin">Male</button>
-        <button id="female-btn" data-type="mannequin">Female</button>
-    </section>
+    <header>
+        <h1>Fashion Game</h1>
+    </header>
 
-    <!-- Closet Section -->
-    <section id="closet" style="display:none;">
-        <h1>Choose Your Outfit</h1>
-        <div id="shirts">Shirts: Add a shirt to your mannequin</div>
-        <div id="pants">Pants: Add pants to your mannequin</div>
-        <div id="skirts">Skirts: Add a skirt to your mannequin</div>
-        <div id="jackets">Jackets: Add a jacket to your mannequin</div>
-        <div id="shoes">Shoes: Add shoes to your mannequin</div>
-        <div id="accessories">Accessories: Add some accessories to your mannequin</div>
-        <div id="hair">Hair: Choose a hairstyle for your mannequin</div>
-    </section>
+    <main>
+        <!-- Mannequin Selection Section -->
+        <section id="mannequin-selection">
+            <h2>Select Your Mannequin</h2>
+            <button id="male-btn">Male</button>
+            <button id="female-btn">Female</button>
+        </section>
 
-    <!-- Rating Screen Section -->
-    <section id="rating-screen" style="display:none;">
-        <h1>Your Rating</h1>
-        <div id="rating-display">Your rating will appear here.</div>
-    </section>
-    
+        <!-- Closet Section -->
+        <section id="closet" style="display:none;">
+            <h2>Choose Your Outfit</h2>
+            <div class="clothing-item" id="shirts">Shirts</div>
+            <div class="clothing-item" id="pants">Pants</div>
+            <div class="clothing-item" id="skirts">Skirts</div>
+            <div class="clothing-item" id="jackets">Jackets</div>
+            <div class="clothing-item" id="shoes">Shoes</div>
+            <div class="clothing-item" id="accessories">Accessories</div>
+            <div class="clothing-item" id="hair">Hair</div>
+            <button id="finish-btn">Finish</button>
+        </section>
+
+        <!-- Rating Screen Section -->
+        <section id="rating-screen" style="display:none;">
+            <h2>Your Rating</h2>
+            <div id="rating-display">Your rating will appear here.</div>
+            <p id="rating-feedback">Great job! Try again to improve your score.</p>
+        </section>
+    </main>
+
+    <footer>
+        <button id="restart-btn">Restart Game</button>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-    <section id="instructions">
-    <h2>How to Play</h2>
-    <p>1. Select a mannequin to start designing.</p>
-    <p>2. Choose clothing and accessories from the closet.</p>
-    <p>3. Click "Finish" to see your outfit's rating!</p>
-</section>
-<section id="closet" style="display:none;">
-    <h1>Choose Your Outfit</h1>
-    <!-- Closet categories here -->
-    <button id="finish-btn">Finish</button>
-</section>
-<section id="rating-screen" style="display:none;">
-    <h1>Your Rating</h1>
-    <div id="rating-display">Your rating will be displayed here.</div>
-    <p id="rating-feedback">Great job! Try again to improve your score.</p>
-</section>
-<footer>
-    <button id="restart-btn">Restart Game</button>
-</footer>
-<header>
-    <h1>Fashion Game</h1>
-</header>
-
 </html>
-
-
 
